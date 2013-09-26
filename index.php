@@ -9,13 +9,13 @@ include_once ("./php/connectionBDD/connection.php");
     <h1>Formulaire d'inscription</h1>
     <form action='./php/inscriptionClient.php' method='post'>
         <label for="pseudo">Pseudo</label>
-            <input name="pseudo" type="text" class="formulaire_connexion" id="login"/><br />
+            <input name="pseudo" type="text" class="formulaire_connexion" id="login" required/><br />
         <label for="email">E-mail</label>
-            <input name="email" type="email" class="formulaire_connexion" id="email"/><br />
+            <input name="email" type="email" class="formulaire_connexion" id="email" required/><br />
         <label for="psw">Mot de passe</label>
-            <input name="psw" type="password" class="formulaire_connexion" id="psw"/><br />
+            <input name="psw" type="password" class="formulaire_connexion" id="psw" required/><br />
         <label for="v_psw">Confirmation du mot de passe</label>
-            <input name="v_psw" type="password" class="formulaire_connexion" id="v_psw"/><br />
+            <input name="v_psw" type="password" class="formulaire_connexion" id="v_psw" required/><br />
         <label for="nom">Prenom</label>
             <input name="prenom" type="text" class="formulaire_connexion" id="prenom"/><br />
         <label for="nom">Nom</label>

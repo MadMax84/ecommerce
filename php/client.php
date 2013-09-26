@@ -1,9 +1,18 @@
 <?php
 
-function verifCorresMotDePasse($psw, $v_psw){
-    if($psw == $v_psw)
+function verifCorresMotDePasse($psw, $v_psw) {
+    if ($psw == $v_psw)
         return true;
     return false;
+}
+
+function verifUnicitePseudo($bdd, $pseudo) {
+    try {
+        $Req = $bdd->prepare("SELECT pseudo FROM client WHERE pseudo LIKE ?");
+        $Req->execute(array($pseudo));
+    } catch (Exception $e) { //interception de l'erreur
+        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
+    }
 }
 
 /**
