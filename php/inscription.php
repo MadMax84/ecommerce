@@ -1,6 +1,6 @@
 <div class="form_inscription">
     <h1>Formulaire d'inscription</h1>
-    <form action='./php/inscriptionClient.php' method='post'>
+    <form action='./inscriptionClient.php' method='post'>
         <label for="pseudo">Pseudo</label>
             <input name="pseudo" type="text" class="formulaire_connexion" id="login"/><br />
         <label for="email">E-mail</label>

@@ -31,4 +31,14 @@ function enregistrerClient($bdd, $pseudo, $psw, $email) {
     }
 }
 
+function verifConnexion($bdd, $pseudo, $psw) {
+    try {
+        $Req = $bdd->prepare("SELECT * FROM client WHERE pseudo LIKE ? AND mdp LIKE ?");
+        $Req->execute(array($pseudo, $psw));
+    } catch (Exception $e) {
+        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
+    }
+    $var = $Req->rowCount() == 1 ? true : false;
+    return $var;
+}
 ?>

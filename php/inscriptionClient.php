@@ -13,6 +13,7 @@ if(isset($_POST["bouton_envoi"]))
         
     }*/
     
-    enregistrerClient($bdd, $pseudo, crypt($psw), $email);
+    enregistrerClient($bdd, $pseudo, sha1($psw), $email);
+    header("Location: ../index.php?succes=true");
 }
 ?>

@@ -6,4 +6,12 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     </head>
     <body>
-Wilkommen!
+        <div class="login">
+            <form action="./php/login.php" method="post">
+                <label for="login">Login</label>
+                <input name="login" type="text" class="login" id="login"/>
+                <label for="pass">Mot de passe</label>
+                <input name="pass" type="password" class="login" id="pass"/>
+                <input name="connexion" type="submit" class="login" id="se_connecter"/>
+            </form>
+            <a href="./php/inscription.php">Pas encore inscrit?</a>

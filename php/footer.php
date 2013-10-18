@@ -1,4 +1,4 @@
-<div class ="footer">
+<div class="footer">
     <div class="footer_menu">
        
     <ul>GrindHouse Leather
