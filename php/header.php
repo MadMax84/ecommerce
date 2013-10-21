@@ -10,8 +10,15 @@
             <form action="./php/login.php" method="post">
                 <label for="login">Login</label>
                 <input name="login" type="text" class="login" id="login"/>
-                <label for="pass">Mot de passe</label>
-                <input name="pass" type="password" class="login" id="pass"/>
+                <label for="psw">Mot de passe</label>
+                <input name="psw" type="password" class="login" id="psw"/>
                 <input name="connexion" type="submit" class="login" id="se_connecter"/>
             </form>
             <a href="./php/inscription.php">Pas encore inscrit?</a>
+        </div>
+        <div class="header_menu">
+            <ul>
+                
+            </ul>
+        </div>
+

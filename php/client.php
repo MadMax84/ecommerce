@@ -31,6 +31,13 @@ function enregistrerClient($bdd, $pseudo, $psw, $email) {
     }
 }
 
+/**
+ * Vérifie que la correspondance pseudo/mot de passe
+ * @param type $bdd base de données
+ * @param type $pseudo pseudo du client
+ * @param type $psw mot de passe du client
+ * @return type 
+ */
 function verifConnexion($bdd, $pseudo, $psw) {
     try {
         $Req = $bdd->prepare("SELECT * FROM client WHERE pseudo LIKE ? AND mdp LIKE ?");

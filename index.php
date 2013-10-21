@@ -1,14 +1,26 @@
-<?php
+<?php require "include/header.php"; ?>
+<?php require "include/functions.php";?>
 
-header('Content-Type: text/html; charset=utf-8');
-session_start();
-include_once ("./php/connectionBDD/connection.php");
+<section id="conteneur">
+    <div id="myCarousel" class="carousel slide hidden-phone">
+            <!-- Carousel items -->
+            <div id="slideshow" class="carousel-inner">
+                <?php
+                    $bdd = bdd();
+                    $backgrounds = $bdd->query('SELECT adrSlides FROM slideshow');
+                    foreach($backgrounds as $background) {
+                        echo '<div class="item"><img src="'.$background['adrSlides'].'"/></div>';
+                    }
+                ?>
+            </div>
+    </div>
+</section>
 
-include_once './php/header.php';
-?>
+<script>
+$('.carousel').carousel({
+  interval: 20000
+})
+</script>
 
-
-
-<?php
-include_once ("./php/footer.php");
-?>
+<?php require "include/footer.php"; ?>
+<?php require "include/formContact.php";?>
