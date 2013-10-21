@@ -22,8 +22,8 @@
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
                 </ul>
             </section>
-            <?php if (!isset($_SESSION['login'])) { ?>
-                <section id="login">
+            <section id="login">
+                <?php if (!isset($_SESSION['login'])) { ?>
                     <form action="php/login.php" method="post">
                         <label for="login">Login</label>
                         <input name="login" type="text" class="login" id="login"/>
