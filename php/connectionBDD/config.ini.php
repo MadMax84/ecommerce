@@ -1,7 +1,7 @@
 <?php
 
 $host="localhost";
-$bdd="ecommerce";
+$bdd="grindhouse";
 $user="root";
 $pass="";
 

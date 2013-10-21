@@ -1,7 +1,7 @@
 <?php
 
-include_once ("./connectionBDD/connection.php");
-include_once ("./client.php");
+include_once '../include/functions.php';
+include_once 'client.php';
 
 if (isset($_POST["bouton_envoi"])) {
     $pseudo = htmlspecialchars($_POST["pseudo"]);
