@@ -23,6 +23,7 @@
                 </ul>
             </section>
             <section id="login">
+
                 <?php if (!isset($_SESSION['login'])) { ?>
                     <form action="php/login.php" method="post">
                         <label for="login">Login</label>
@@ -32,7 +33,8 @@
                         <input name="connexion" type="submit" class="login" id="se_connecter"/>
                     </form>
                     <a href="./moncompte.php">Pas encore inscrit?</a>
-                <?php } else { ?>
+                <?php } else {
+                    echo("<div class=\"id_connexion\">Connecté en tant que : " . $_SESSION['login'] . "</div>"); ?>
                     <a href="../php/deconnexion.php">Deconnexion</a>
                     <?php
                 }
