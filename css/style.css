@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "ChampagneLimousine";
-	src : url('champagne.ttf');
+    src : url('champagne.ttf');
 }
 @font-face {
     font-family: "ChampagneLimousine";
@@ -12,111 +12,142 @@
 }
 
 body {
-	margin:0px;
+    margin:0px;
+    background-image:url('background.png');
+
 }
 
 header {
-	width:100%;
-	height:100px;
-	position:fixed;
-	background-color: #ffffff;
-	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+    width:100%;
+    height:100px;
+    position:fixed;
+    background-color: rgba(255,255,255,0.7);
+    font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
 }
 
 #nameSite {
-	padding:20px;
-	font-size:50px;
-	float:left;
+    padding:20px;
+    font-size:50px;
+    float:left;
 }
 
 #imgPanier {
-	width:inherit;
-	height:70px;
-	background-image:url(../design/imgpanier.png);
-	background-position:center;
-	background-repeat:no-repeat;
+    width:inherit;
+    height:70px;
+    background-image:url(../design/imgpanier.png);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 #panier {
-	width:100px;
-	height:inherit;
-	background-color:#333333;
-	float:left;
-	color:#ffffff;
-	font-size:20px;
-	text-align:center;
-	right:20px;
-	position:fixed;
+    width:100px;
+    height:inherit;
+    background-color:#333333;
+    float:left;
+    color:#ffffff;
+    font-size:20px;
+    text-align:center;
+    right:20px;
+    position:fixed;
 }
 
 #panier a {
-	color:#ffffff;
-	text-decoration:none;
+    color:#ffffff;
+    text-decoration:none;
 }
 
 #nameSite a:hover {
-	text-decoration:none;
-	color:#333333;
+    text-decoration:none;
+    color:#333333;
 }
 
 #menu {
-	float:left;
-	padding:45px;
-	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
-	font-size:20px;
+    float:left;
+    padding:45px;
+    font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+    font-size:20px;
 }
 
 #menu li {
-	list-style-type:none;
-	float:left;
-	padding-right:30px;
+    list-style-type:none;
+    float:left;
+    padding-right:30px;
 }
 
 #conteneur {
-	width:100%;
-	height:900px;
-	margin-top:100px;
-	float:left;
+    width:100%;
+    height:auto;
+    margin-top:100px;
+    float:left;
+    min-height:500px;
 }
 
 #slideshow {
-	position:fixed;
+    position:fixed;
 }
 
 #myCarousel {
-	float:left;
+    float:left;
 }
 
 #contain {
-	width:800px;
-	margin-left:auto;
-	margin-right:auto;
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #newclient, #loginclient {
-	width:400px;
-	height:300px;
-	float:left;
+    width:400px;
+    height:300px;
+    float:left;
 }
 
 #newclient {
-	background-color:#006699;
+    background-color:#006699;
 }
 
 #loginclient {
-	background-color:#FF6600;
+    background-color:#FF6600;
 }
 
 footer {
-	width:100%;
-	height:200px;
-	background-color:#ffffff;
-	clear:both;
+    width:100%;
+    height:200px;
+    background-color:#ffffff;
+    clear:both;
+    background-color: rgba(255,255,255,0.7);
+
 }
 
 #logoFooter {
-	background-image:url(../design/logo.png);
-	background-repeat:no-repeat;
-	width:250px;
-	height:200px;
+    background-image:url(../design/logo.png);
+    background-repeat:no-repeat;
+    width:250px;
+    height:200px;
+}
+.cata {
+
+
+}
+.catlibelle
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    position:relative;
+    top:15px;
+}
+.imglib
+{
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 5px 30px #AAAAAA;
+    float: left;
+    height: 200px;
+    margin-bottom:50px;
+    margin-left: 100px;
+    margin-right: 75px;
+    margin-top:25px;
+    width: 200px;
+
 }
