@@ -10,7 +10,7 @@ if (isset($_POST["connexion"])) {
     if (verifConnexion($bdd, $pseudo, sha1($psw))) {
         session_start();
         $_SESSION['login'] = $pseudo;
-        header("Location: ../moncompte.php?succes=true");
+        header("Location: ../index.php?succes=true");
     }
     else
         header("Location: ../index.php?succes=false");
