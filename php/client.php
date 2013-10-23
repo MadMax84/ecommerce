@@ -74,31 +74,15 @@ function verifAdresse($adresse) {
  * @param type $psw mot de passe du client 
  * @param type $email email du client
  */
-function enregistrerClient($bdd, $pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel) {
+function enregistrerClient($bdd, $pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel, $num_rue, $adresse, $cp, $ville, $num_rue_liv, $adresse_liv, $cp_liv, $ville_liv, $pays) {
     try {
-        $Req = $bdd->prepare("INSERT INTO clients (ID_client,pseudo,password,email,nom,prenom,date_naissance,civilite,telephone) 
-                              VALUES('',?,?,?,?,?,?,?,?)");
-        $Req->execute(array($pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel));
-    } catch (Exception $e) { //interception de l'erreur
-        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
-    }
-}
-
-function enregistrerAdresse($num_rue, $adresse, $cp, $ville, $pays) {
-    try {
-        $Req = $bdd->prepare("INSERT INTO clients (num_facturation,adresse_facturation,cp_facturation,ville_facturation,pays) 
-                              VALUES('','','','','','','','','',?,?,?,?,'','','','',?)");
-        $Req->execute(array($num_rue, $adresse, $cp, $ville, $pays));
-    } catch (Exception $e) { //interception de l'erreur
-        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
-    }
-}
-
-function enregistrerAdrLivraison($num_rue_liv, $adresse_liv, $cp_liv, $ville_liv){
-    try {
-        $Req = $bdd->prepare("INSERT INTO clients (num_facturation,adresse_facturation,cp_facturation,ville_facturation,pays) 
-                              VALUES('','','','','','','','','','','','','',?,?,?,?)");
-        $Req->execute(array($num_rue_liv, $adresse_liv, $cp_liv, $ville_liv));
+        $Req = $bdd->prepare("INSERT INTO clients (ID_client,pseudo,password,email,nom,prenom,date_naissance,civilite,telephone,
+                                                   num_facturation,adresse_facturation,cp_facturation,ville_facturation,
+                                                   num_livraison,adresse_livraison,cp_livraison,ville_livraison,pays) 
+                              VALUES('',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $Req->execute(array($pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel,
+            $num_rue, $adresse, $cp, $ville,
+            $num_rue_liv, $adresse_liv, $cp_liv, $ville_liv, $pays));
     } catch (Exception $e) { //interception de l'erreur
         die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
     }

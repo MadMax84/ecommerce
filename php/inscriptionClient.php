@@ -10,7 +10,7 @@ if (isset($_POST["bouton_envoi"])) {
     $v_psw = htmlspecialchars($_POST["v_psw"]);
     $prenom = htmlspecialchars($_POST["prenom"]);
     $nom = htmlspecialchars($_POST["nom"]);
-    $date = htmlspecialchars($_POST["date"]);
+    $date = htmlspecialchars($_POST["naissance"]);
     $sexe = htmlspecialchars($_POST["sexe"]);
     $tel = htmlspecialchars($_POST["tel"]);
     $num_rue = htmlspecialchars($_POST["num_rue"]);
@@ -70,9 +70,9 @@ if (isset($_POST["bouton_envoi"])) {
         $erreur.="</div>";
         header("Location: ../moncompte.php?succes=$erreur");
     } else {
-        enregistrerClient($bdd, $pseudo, sha1($psw), $email, $nom, $prenom, $date, $sexe, $tel); 
-        enregistrerAdresse($num_rue, $adresse, $cp, $ville, $pays); 
-        enregistrerAdrLivraison($num_rue_liv, $adresse_liv, $cp_liv, $ville_liv);
+        enregistrerClient($bdd, $pseudo, sha1($psw), $email, $nom, $prenom, $date, $sexe, $tel,
+                          $num_rue, $adresse, $cp, $ville, 
+                          $num_rue_liv, $adresse_liv, $cp_liv, $ville_liv, $pays);
         header("Location: ../index.php?succes=true");
     }
 } else {

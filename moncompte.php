@@ -21,10 +21,11 @@
                     <label for="naissance">Date de naissance</label>
                     <input name="naissance" type="date" class="formulaire_inscription" id="naissance" required/>
                     <label for="sexe">Sexe</label>
-                    <input name="sexe" type="radio" value="" id="sexe"/> Homme
-                    <input name="sexe" type="radio" value=""/> Femme
+                    <input name="sexe" type="radio" value="Homme" id="sexe"/> Homme
+                    <input name="sexe" type="radio" value="Femme"/> Femme
                     <label for="tel">Tel</label>
                     <input name="tel" type="tel" class="formulaire_inscription" id="tel" required/>
+
                     <label>Adresse de facturation</label>
                     <label for="num_rue">Numéro de rue</label>
                     <input name="num_rue" type="text" class="formulaire_inscription" id="num_rue"/>
@@ -34,6 +35,7 @@
                     <input name="cp" type="text" class="formulaire_inscription" id="cp" required/>
                     <label for="ville">Ville</label>
                     <input name="ville" type="text" class="formulaire_inscription" id="ville" required/>
+
                     <label>Adresse de livraison</label>
                     <label for="num_rue_liv">Numéro de rue</label>
                     <input name="num_rue_liv" type="text" class="formulaire_inscription" id="num_rue_liv"/>
