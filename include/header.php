@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -24,16 +27,16 @@
             </section>
             <?php if (!isset($_SESSION['login']) || $_SESSION['login'] != '') { ?>
                 <section id="login">
-                    <!-- <form action="php/login.php" method="post">
-                         <label for="login">Login</label>
-                         <input name="login" type="text" class="login" id="login"/>
-                         <label for="psw">Mot de passe</label>
-                         <input name="psw" type="password" class="login" id="psw"/>
-                         <input name="connexion" type="submit" class="login" id="se_connecter"/>
-                     </form>
-                     <a href="./moncompte.php">Pas encore inscrit?</a>-->
+                    <form action="php/login.php" method="post">
+                        <label for="login">Login</label>
+                        <input name="login" type="text" class="login" id="login"/>
+                        <label for="psw">Mot de passe</label>
+                        <input name="psw" type="password" class="login" id="psw"/>
+                        <input name="connexion" type="submit" class="login" id="se_connecter"/>
+                    </form>
+                    <a href="./moncompte.php">Pas encore inscrit?</a>
                 <?php } else { ?>
-                    <a href="../php/deconnexion.php">Deconnexion</a>
+                    <a href="php/deconnexion.php">Deconnexion</a>
                     <?php
                 }
                 ?>

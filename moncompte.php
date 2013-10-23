@@ -61,12 +61,11 @@
                 </form>
                 <a href="./moncompte.php">Pas encore inscrit?</a>
             </section>
-        <?php } else { ?>
-            <section id="espace_membre">
-                Bienvenue!
-            </section>
-
-            <?php
+        <?php
+        } else {
+            echo '<section id="espace_membre">
+                Bienvenue! ' . $_SESSION['login'] . '
+            </section>';
         }
         ?>
     </section>
