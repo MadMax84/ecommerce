@@ -40,8 +40,31 @@ function verifUnicitePseudo($bdd, $pseudo) {
     else {
         $var = false;
     }
-
     return $var;
+}
+
+function verifTel($tel) {
+    $bon = true;
+    if (preg_match("#^[0-9]{10}$#", $tel)) {
+        $bon = TRUE;
+    }
+    return $bon;
+}
+
+function verifCP($cp) {
+    $bon = true;
+    if (preg_match("#^[0-9]{5}$#", $cp)) {
+        $bon = TRUE;
+    }
+    return $bon;
+}
+
+function verifAdresse($adresse) {
+    $bon = true;
+    if (preg_match("#^[A-Za-z]{1,}$#", $adresse)) {
+        $bon = TRUE;
+    }
+    return $bon;
 }
 
 /**
@@ -51,10 +74,31 @@ function verifUnicitePseudo($bdd, $pseudo) {
  * @param type $psw mot de passe du client 
  * @param type $email email du client
  */
-function enregistrerClient($bdd, $pseudo, $psw, $email) {
+function enregistrerClient($bdd, $pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel) {
     try {
-        $Req = $bdd->prepare("INSERT INTO clients (ID_client,pseudo,password,email) VALUES('',?,?,?)");
-        $Req->execute(array($pseudo, $psw, $email));
+        $Req = $bdd->prepare("INSERT INTO clients (ID_client,pseudo,password,email,nom,prenom,date_naissance,civilite,telephone) 
+                              VALUES('',?,?,?,?,?,?,?,?)");
+        $Req->execute(array($pseudo, $psw, $email, $nom, $prenom, $date, $sexe, $tel));
+    } catch (Exception $e) { //interception de l'erreur
+        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
+    }
+}
+
+function enregistrerAdresse($num_rue, $adresse, $cp, $ville, $pays) {
+    try {
+        $Req = $bdd->prepare("INSERT INTO clients (num_facturation,adresse_facturation,cp_facturation,ville_facturation,pays) 
+                              VALUES('','','','','','','','','',?,?,?,?,'','','','',?)");
+        $Req->execute(array($num_rue, $adresse, $cp, $ville, $pays));
+    } catch (Exception $e) { //interception de l'erreur
+        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
+    }
+}
+
+function enregistrerAdrLivraison($num_rue_liv, $adresse_liv, $cp_liv, $ville_liv){
+    try {
+        $Req = $bdd->prepare("INSERT INTO clients (num_facturation,adresse_facturation,cp_facturation,ville_facturation,pays) 
+                              VALUES('','','','','','','','','','','','','',?,?,?,?)");
+        $Req->execute(array($num_rue_liv, $adresse_liv, $cp_liv, $ville_liv));
     } catch (Exception $e) { //interception de l'erreur
         die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
     }

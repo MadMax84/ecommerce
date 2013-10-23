@@ -22,9 +22,8 @@
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
                 </ul>
             </section>
-            <section id="login">
-
-                <?php if (!isset($_SESSION['login'])) { ?>
+            <?php if (!isset($_SESSION['login']) || $_SESSION['login'] != '') { ?>
+                <section id="login">
                     <form action="php/login.php" method="post">
                         <label for="login">Login</label>
                         <input name="login" type="text" class="login" id="login"/>
@@ -33,8 +32,7 @@
                         <input name="connexion" type="submit" class="login" id="se_connecter"/>
                     </form>
                     <a href="./moncompte.php">Pas encore inscrit?</a>
-                <?php } else {
-                    echo("<div class=\"id_connexion\">Connecté en tant que : " . $_SESSION['login'] . "</div>"); ?>
+                <?php } else { ?>
                     <a href="../php/deconnexion.php">Deconnexion</a>
                     <?php
                 }
