@@ -106,4 +106,15 @@ function verifConnexion($bdd, $pseudo, $psw) {
     return $var;
 }
 
+function verifConnexionAdmin($bdd, $pseudo, $psw) {
+    try {
+        $Req = $bdd->prepare("SELECT * FROM admin WHERE login LIKE ? AND password LIKE ?");
+        $Req->execute(array($pseudo, $psw));
+    } catch (Exception $e) {
+        die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
+    }
+    $var = $Req->rowCount() == 1 ? true : false;
+    return $var;
+}
+
 ?>
