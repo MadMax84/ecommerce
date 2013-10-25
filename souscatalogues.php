@@ -9,13 +9,13 @@
     while ($catalogue = $souscatalogues->fetch()) {
         $var = trim($catalogue['souscat_img'], '"../"');
         $id2 = $catalogue['ID_souscatalogue'];
-        echo '<div class="imglib">';
-        echo'<a href="produits.php?id=' . $id2 . '"><img src="' . $var . '" class="cata"></a>';
-        echo '<div class="catlibelle">' . $catalogue['souscat_libelle'] . '</div>';
-        echo '</div>';
+        echo '<div class="imglib">
+                <a href="produits.php?id=' . $id2 . '"><img src="' . $var . '" class="cata"></a>
+                <div class="catlibelle">' . $catalogue['souscat_libelle'] . '</div>
+              </div>';
     }
     ?>
 </section>
 
-    <?php require "include/footer.php"; ?>
+<?php require "include/footer.php"; ?>
 <?php require "include/formContact.php"; ?>

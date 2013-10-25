@@ -7,10 +7,10 @@
     while ($catalogue = $catalogues->fetch()) {
         $var = trim($catalogue['cat_img'], '"../"');
         $id = $catalogue['ID_catalogue'];
-        echo '<div class="imglib">';
-        echo '<a href="souscatalogues.php?id=' . $id . '"><img src="' . $var . '" class="cata"></a>';
-        echo '<div class="catlibelle">' . $catalogue['cat_libelle'] . '</div>';
-        echo '</div>';
+        echo '<div class="imglib">
+                <a href="souscatalogues.php?id=' . $id . '"><img src="' . $var . '" class="cata"></a>
+                <div class="catlibelle">' . $catalogue['cat_libelle'] . '</div>
+              </div>';
     }
     ?>
 </section>
