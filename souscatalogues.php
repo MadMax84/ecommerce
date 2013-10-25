@@ -4,7 +4,9 @@
 <section id="conteneur">
     <?php
     $id = $_GET['id'];
-    $souscatalogues = $bdd->query('SELECT souscat_libelle, souscat_img, ID_souscatalogue FROM souscatalogue WHERE catalogue_ID_catalogue=' . $id . '');
+    $souscatalogues = $bdd->query('SELECT souscat_libelle, souscat_img, ID_souscatalogue 
+                                   FROM souscatalogue 
+                                   WHERE catalogue_ID_catalogue=' . $id . '');
 
     while ($catalogue = $souscatalogues->fetch()) {
         $var = trim($catalogue['souscat_img'], '"../"');

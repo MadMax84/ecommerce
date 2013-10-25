@@ -1,6 +1,8 @@
 <?php
 require 'include/functions.php';
-require 'include/_header.php';
+require 'php/panier.class.php';
+
+$panier = new panier();
 session_start();
 if (isset($_POST['deco'])) {
     session_destroy();
@@ -53,6 +55,6 @@ if (isset($_POST['deco'])) {
         </section>
         <section id="panier">
             <section id="imgPanier"></section>
-            <a href="">Mon Panier</a>
+            <a href="php/panier.php">Mon Panier</a>
         </section>
     </header>

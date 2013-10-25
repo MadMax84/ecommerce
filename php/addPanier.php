@@ -1,7 +1,6 @@
 <?php
 
-require '../include/functions.php';
-require '../include/_header.php';
+require '../include/header.php';
 
 if (isset($_GET['id'])) {
     $req = $bdd->prepare('SELECT ID_produit FROM produits WHERE ID_produit=:id');
