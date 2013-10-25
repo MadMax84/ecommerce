@@ -1,5 +1,6 @@
 <?php
-require 'php/panier.php';
+require 'include/functions.php';
+require 'php/panier.class.php';
 
 session_start();
 if (isset($_POST['deco'])) {

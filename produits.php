@@ -4,7 +4,7 @@
 <section id="conteneur">
     <?php
     $id = $_GET['id'];
-    $produits = $bdd->query('SELECT distinct nom, prix, quantite, nouveaute, adrImage1 
+    $produits = $bdd->query('SELECT distinct ID_produit, nom, prix, quantite, nouveaute, adrImage1 
                              FROM produits p INNER JOIN images i ON p.ID_produit=i.produits_ID_produit 
                              WHERE souscatalogue_ID_souscatalogue=' . $id . '');
 
