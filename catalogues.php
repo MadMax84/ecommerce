@@ -5,9 +5,10 @@
     <?php
     $catalogues = $bdd->query('SELECT cat_libelle, cat_img, ID_catalogue FROM catalogue');
     while ($catalogue = $catalogues->fetch()) {
+        $var = trim($catalogue['cat_img'], '"../"');
         $id = $catalogue['ID_catalogue'];
         echo '<div class="imglib">';
-        echo '<a href="souscatalogues.php?id=' . $id . '"><img src="' . $catalogue['cat_img'] . '" class="cata"></a>';
+        echo '<a href="souscatalogues.php?id=' . $id . '"><img src="' . $var . '" class="cata"></a>';
         echo '<div class="catlibelle">' . $catalogue['cat_libelle'] . '</div>';
         echo '</div>';
     }

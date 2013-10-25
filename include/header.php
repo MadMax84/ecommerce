@@ -17,10 +17,7 @@ if (isset($_POST['deco'])) {
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
     </head>
-    <script>function test(){document.getElementById("body").style.background='url(\'css/background.png\')'}</script>
-    <body id="body" onload="test();">
-        
-
+    <body>
         <header>
             <section id="nameSite"><a href="index.php">GrindHouse Leather</a></section>
             <section id="menu">
@@ -29,10 +26,11 @@ if (isset($_POST['deco'])) {
                     <li><i class="icon-th-list"></i> <a href="catalogues.php">Catalogues</a></li>
                     <li><i class="icon-tags"></i> <a href="nouveautes.php">Nouveautés</a></li>
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
-                    <?php if(isset($_SESSION['login']) == 'root'){echo '<li><i class="icon-tags"></i> <a href="../admin/dashboard.php">Administration</a></li>';} ?>
+                    
                 </ul>
             </section>
-            <?php if (!isset($_SESSION['login']) || $_SESSION['login'] == '') { 
+            <?php
+            if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                 echo '<section id="login">
                     <form action="php/login.php" method="post">
                         <label for="login">Login</label>
@@ -42,17 +40,17 @@ if (isset($_POST['deco'])) {
                         <input name="connexion" type="submit" class="login" id="se_connecter"/>
                     </form>
                     <a href="./moncompte.php">Pas encore inscrit?</a>';
-                } else { 
-                    echo '<form method="POST" class="form-inline">      
+            } else {
+                echo '<form method="POST" class="form-inline">      
                         <div class="login">
                             <button type="submit" name="deco" id="deco" class="btn">Se déconnecter</button>
                         </div>
-                    </form>';                    
-                }
-                ?>
-            </section>
-            <section id="panier">
-                <section id="imgPanier"></section>
-                <a href="">Mon Panier</a>
-            </section>
-        </header>
+                    </form>';
+            }
+            ?>
+        </section>
+        <section id="panier">
+            <section id="imgPanier"></section>
+            <a href="">Mon Panier</a>
+        </section>
+    </header>
