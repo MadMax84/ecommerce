@@ -9,7 +9,8 @@ class panier{
         }
     }
     
-    public function add(){
+    public function add($idProduit){
+        $_SESSION['panier'][$idProduit] = 1;
         
     }
 }

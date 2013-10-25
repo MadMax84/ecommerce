@@ -1,7 +1,6 @@
 <?php
 require 'include/functions.php';
-require 'php/panier.class.php';
-
+require 'include/_header.php';
 session_start();
 if (isset($_POST['deco'])) {
     session_destroy();
