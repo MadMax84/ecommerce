@@ -1,18 +1,20 @@
 <?php
 
+require '../include/functions.php';
 require '../include/_header.php';
 
-
-if (isset($_GET['id'])) {
-    $produit = $req->requete('SELECT ID_produit FROM produits WHERE ID_produit=:id', array('id' => $_GET['id']));
+if (isset($_GET['id_produit'])) {
+    $req = $bdd->prepare('SELECT ID_produit FROM produits WHERE ID_produit=:id', array('id' => $_GET['id_produit']));
+    $req->execute(array('id' => $_GET['id_produit']));
+    $produit = $req->fetchAll(PDO::FETCH_OBJ);
     var_dump($produit);
 
-    if (empty($req)) {
+    if (empty($produit)) {
         die('Ce produit n\'existe pas');
     }
-    $panier->add($req[0]->id);
-    die('le produit a bien été ajouté à votre panier');
+    $panier->add($produit[0]->ID_produit);
+    die('le produit a bien ete ajoute a votre panier, <a href = "../catalogues.php">retourner sur le catalogue</a>');
 } else {
-    die('vous n\'avez pas sélectionné de produit à ajouter au panier');
+    die('vous n\'avez pas selectionne de produit a ajouter au panier');
 }
 ?>

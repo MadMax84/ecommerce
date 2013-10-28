@@ -5,10 +5,4 @@ try {
 } catch (Exception $e) {
     die('erreur :' . $e->getMessage());
 }
-
-function requete($sql, $data = array()){
-    $req = $bdd->prepare($sql);
-    $req=execute($data);
-    return $req->fetchAll(PDO::FETCH_OBJ);
-}
 ?>

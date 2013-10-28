@@ -13,7 +13,7 @@
         $id2 = $produit['ID_produit'];
         echo '<div class="imglib">
                 <a href="#"><img src="' . $var . '" class="cata"></a>
-                <a href="php/addPanier.php?id=' . $id2 . '"> add </a>
+                <a href="php/addPanier.php?id_produit=' . $id2 . '"> add </a>
                 <div class="catlibelle">' . $produit['nom'] . '</div>
               </div>';
     }

@@ -1,6 +1,7 @@
 <?php
-require './_header.php';
+require 'functions.php';
 
+session_start();
 if (isset($_POST['deco'])) {
     session_destroy();
     header('Location: ./index.php');
