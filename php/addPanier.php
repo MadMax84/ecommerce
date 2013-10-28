@@ -1,12 +1,12 @@
 <?php
 
-require '../include/header.php';
+require '../include/_header.php';
+
 
 if (isset($_GET['id'])) {
-    $req = $bdd->prepare('SELECT ID_produit FROM produits WHERE ID_produit=:id');
-    $req->execute(array('id' => $_GET['id']));
-    $req->fetchAll(PDO::FETCH_OBJ);
-    var_dump($req);
+    $produit = $req->requete('SELECT ID_produit FROM produits WHERE ID_produit=:id', array('id' => $_GET['id']));
+    var_dump($produit);
+
     if (empty($req)) {
         die('Ce produit n\'existe pas');
     }

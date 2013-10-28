@@ -1,15 +1,11 @@
 <?php
-require 'include/functions.php';
-require 'php/panier.class.php';
+require './_header.php';
 
-$panier = new panier();
-session_start();
 if (isset($_POST['deco'])) {
     session_destroy();
     header('Location: ./index.php');
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -30,7 +26,7 @@ if (isset($_POST['deco'])) {
                     <li><i class="icon-th-list"></i> <a href="catalogues.php">Catalogues</a></li>
                     <li><i class="icon-tags"></i> <a href="nouveautes.php">Nouveautés</a></li>
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
-                    
+
                 </ul>
             </section>
             <?php

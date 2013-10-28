@@ -1,6 +1,6 @@
 <?php
 
-include_once '../include/functions.php';
+include_once '../include/_header.php';
 include_once 'client.php';
 
 if (isset($_POST["bouton_envoi"])) {
