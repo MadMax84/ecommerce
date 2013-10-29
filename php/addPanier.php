@@ -1,11 +1,13 @@
 <?php
 
 require '../include/functions.php';
-require '../include/_header.php';
+require 'panier.class.php';
+
+$panier = new panier();
 
 if (isset($_GET['id_produit'])) {
-    $req = $bdd->prepare('SELECT ID_produit FROM produits WHERE ID_produit=:id', array('id' => $_GET['id_produit']));
-    $req->execute(array('id' => $_GET['id_produit']));
+    $req = $bdd->prepare('SELECT ID_produit FROM produits WHERE ID_produit=?');
+    $req->execute(array($_GET['id_produit']));
     $produit = $req->fetchAll(PDO::FETCH_OBJ);
 
     if (empty($produit)) {

@@ -4,12 +4,15 @@
 <section id="conteneur">
 	<?php
 		$id = $_GET['id'];
-		$produits = $bdd->query('SELECT nom, p.description, marque, dimensions, prix, quantite, nouveaute, adrImage1 FROM produits p INNER JOIN images i ON p.ID_produit = i.produits_ID_produit where ID_produit ='.$id.'');
+		$produits = $bdd->query('SELECT ID_produit, nom, p.description, marque, dimensions, prix, quantite, nouveaute, adrImage1 
+                                         FROM produits p INNER JOIN images i ON p.ID_produit = i.produits_ID_produit 
+                                         WHERE ID_produit ='.$id.'');
 		
 			 
 		while($produit = $produits->fetch())
 		{
 			$trimmed = trim($produit['adrImage1'], '"../"');
+                        $id2 = $produit['ID_produit'];
 			echo '<div id="titreProduit"><b>'.$produit['nom'].'</b></div>';
 			echo '<div id="imgprod">';
 				echo '<img src="'.$trimmed.'">';
@@ -25,7 +28,7 @@
 						Stock : '.$produit['quantite'].' <br/>
 					</div>
 					<div id="ajoutPanier">
-						<a href="">+ Ajouter au panier</a>
+						<a href="php/addPanier.php?id_produit='.$id2.'">+ Ajouter au panier</a>
 					</div>
 				</div>';
 			

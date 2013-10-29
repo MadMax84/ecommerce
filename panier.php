@@ -1,7 +1,6 @@
 <?php
-require "include/header.php";
 require "include/functions.php";
-require "php/panier.class.php"
+require "include/header.php";
 ?>
 <?php
 if (isset($_GET['del'])) {
@@ -35,7 +34,7 @@ if (isset($_GET['del'])) {
                 <span class="name"><?php $produit->nom; ?></span>
                 <span class="prix"><?php $produit->prix; ?></span>
                 <span class="quantite"><?php $_SESSION['panier'][$produit->ID_produit]; ?></span>
-                <span class="sousTotal">Sous total</span>
+                <span class="sousTotal"><?php $produit->prix * 1.196; ?></span>
                 <span class="action"><a href="panier.php?del=<?php $produit->ID_produit; ?>" class="del">Suppr</a></span>
             </div>
         <?php endforeach; ?>

@@ -28,18 +28,17 @@ if (isset($_GET['deco'])) {
                     <li><i class="icon-tags"></i> <a href="nouveautes.php">Nouveautés</a></li>
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
 
-            <?php
-            if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
-                echo '';
-            } else {
-                echo '<li><i class="icon-off"></i> <a href="?deco">Se déconnecter</a></li>';
-					
-            }	
-            ?>
-            	</ul>
-        </section>
-        <section id="panier" class="hidden-phone">
-            <section id="imgPanier"></section>
-            <a href="panier.php">Mon Panier</a>
-        </section>
-    </header>
+                    <?php
+                    if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
+                        echo '';
+                    } else {
+                        echo '<li><i class="icon-off"></i> <a href="?deco">Se déconnecter</a></li>';
+                    }
+                    ?>
+                </ul>
+            </section>
+            <section id="panier" class="hidden-phone">
+                <section id="imgPanier"></section>
+                <a href="panier.php">Mon Panier</a>
+            </section>
+        </header>

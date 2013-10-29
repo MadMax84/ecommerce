@@ -97,8 +97,8 @@ function enregistrerClient($bdd, $pseudo, $psw, $email, $nom, $prenom, $date, $s
  */
 function verifConnexion($bdd, $pseudo, $psw) {
     try {
-        $Req = $bdd->prepare("SELECT * FROM clients, admin WHERE pseudo LIKE ? AND password LIKE ? OR login LIKE ? AND password LIKE ?");
-        $Req->execute(array($pseudo, $psw, $pseudo, $psw));
+        $Req = $bdd->prepare("SELECT * FROM clients WHERE pseudo LIKE ? AND password LIKE ?");
+        $Req->execute(array($pseudo, $psw));
     } catch (Exception $e) {
         die('<div style="font-weight:bold; color:red">Erreur : ' . $e->getMessage() . '</div>');
     }
