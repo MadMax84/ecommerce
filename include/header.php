@@ -27,7 +27,6 @@ if (isset($_POST['deco'])) {
                     <li><i class="icon-th-list"></i> <a href="catalogues.php">Catalogues</a></li>
                     <li><i class="icon-tags"></i> <a href="nouveautes.php">Nouveautés</a></li>
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
-
                 </ul>
             </section>
             <?php
@@ -52,6 +51,6 @@ if (isset($_POST['deco'])) {
         </section>
         <section id="panier">
             <section id="imgPanier"></section>
-            <a href="php/panier.php">Mon Panier</a>
+            <a href="panier.php">Mon Panier</a>
         </section>
     </header>

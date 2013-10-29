@@ -12,7 +12,15 @@ class panier {
     }
 
     public function add($idProduit) {
-        $_SESSION['panier'][$idProduit] = 1;
+        if (isset($_SESSION['panier'][$idProduit])) {
+            $_SESSION['panier'][$idProduit]++;
+        } else {
+            $_SESSION['panier'][$idProduit] = 1;
+        }
+    }
+    
+    public function delete($idProduit){
+        unset($_SESSION['panier'][$idProduit]);
     }
 
 }
