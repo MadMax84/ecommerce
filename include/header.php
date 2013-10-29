@@ -2,7 +2,7 @@
 require 'functions.php';
 
 session_start();
-if (isset($_POST['deco'])) {
+if (isset($_GET['deco'])) {
     session_destroy();
     header('Location: ./index.php');
 }
@@ -27,29 +27,18 @@ if (isset($_POST['deco'])) {
                     <li><i class="icon-th-list"></i> <a href="catalogues.php">Catalogues</a></li>
                     <li><i class="icon-tags"></i> <a href="nouveautes.php">Nouveautés</a></li>
                     <li><i class="icon-envelope"></i> <a href="#formContact" role="button" data-toggle="modal">Contactez-nous</a></li>
-                </ul>
-            </section>
+
             <?php
             if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
-                echo '<section id="login">
-                    <form action="php/login.php" method="post">
-                        <label for="login">Login</label>
-                        <input name="login" type="text" class="login" id="login"/>
-                        <label for="psw">Mot de passe</label>
-                        <input name="psw" type="password" class="login" id="psw"/>
-                        <input name="connexion" type="submit" class="login" id="se_connecter"/>
-                    </form>
-                    <a href="./moncompte.php">Pas encore inscrit?</a>';
+                echo '';
             } else {
-                echo '<form method="POST" class="form-inline">      
-                        <div class="login">
-                            <button type="submit" name="deco" id="deco" class="btn">Se déconnecter</button>
-                        </div>
-                    </form>';
-            }
+                echo '<li><i class="icon-off"></i> <a href="?deco">Se déconnecter</a></li>';
+					
+            }	
             ?>
+            	</ul>
         </section>
-        <section id="panier">
+        <section id="panier" class="hidden-phone">
             <section id="imgPanier"></section>
             <a href="panier.php">Mon Panier</a>
         </section>

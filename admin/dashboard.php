@@ -25,21 +25,17 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
 	</div>
 	<div id="block5" class="textcenter">
 		<div id="dashIcon"></div>
-		<a href="ventesprivees.php">Ventes privées</a>
+		<a href="clients.php">Clients</a>
 	</div>
 	<div id="block6" class="textcenter">
 		<div id="dashIcon"></div>
-		<a href="clients.php">Clients</a>
+		<a href="commandes.php">Commandes</a>
 	</div>
 	<div id="block7" class="textcenter">
 		<div id="dashIcon"></div>
-		<a href="commandes.php">Commandes</a>
-	</div>
-	<div id="block8" class="textcenter">
-		<div id="dashIcon"></div>
 		<a href="transports.php">Transports</a>
 	</div>
-	<div id="block9" class="textcenter">
+	<div id="block8" class="textcenter">
 		<div id="dashIcon"></div>
 		<a href="slideshow.php">Slideshow</a>
 	</div>

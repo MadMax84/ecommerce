@@ -107,6 +107,15 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
     	<td>OUI <input name="nouveaute" type="radio" value="1" /></td>
         <td>NON <input name="nouveaute" type="radio" value="0" /></td>
     </tr>
+    <thead>
+        <tr>
+            <th colspan="2">Produit visible pour les membres V.I.P :</th>
+        </tr>
+    </thead>
+    <tr>
+    	<td>OUI <input name="vip" type="radio" value="1" /></td>
+        <td>NON <input name="vip" type="radio" value="0" /></td>
+    </tr>
     <tr>
     	<td colspan="2"><input type="submit" value="Ajouter le produit" class="btn btn-primary"/></td>
     </tr>
@@ -116,7 +125,7 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
 
 <?php
 
-if(isset($_POST['nom']) && isset($_POST['descriptionProduit']) && isset($_POST['marque']) && isset($_POST['dimensions']) && isset($_POST['prix']) && isset($_POST['quantite']) && isset($_POST['IDgenre']) && isset($_POST['nouveaute']) && isset($_FILES['avatar'])) {
+if(isset($_POST['nom']) && isset($_POST['descriptionProduit']) && isset($_POST['marque']) && isset($_POST['dimensions']) && isset($_POST['prix']) && isset($_POST['quantite']) && isset($_POST['IDgenre']) && isset($_POST['nouveaute']) && isset($_POST['vip']) && isset($_FILES['avatar'])) {
 
 	// On récupère les données POST
 	$nomProduit = $_POST['nom'];
@@ -128,6 +137,7 @@ if(isset($_POST['nom']) && isset($_POST['descriptionProduit']) && isset($_POST['
 	$souscat = $_POST['sousCat'];
 	$genreProduit = $_POST['IDgenre'];
 	$nouveauteProduit = $_POST['nouveaute'];
+	$vipProduit = $_POST['vip'];
 	
 	$nomImg = $_POST['nomImg1'];
 	$descImg1 = $_POST['descriptionImage1'];
@@ -169,7 +179,7 @@ if(isset($_POST['nom']) && isset($_POST['descriptionProduit']) && isset($_POST['
 			echo 'Upload effectué avec succès !';
 			
 			$bdd2 = bdd();
-			$bdd2->exec("INSERT INTO produits(nom, description, marque, dimensions, prix, quantite, nouveaute, genre_ID_genre, souscatalogue_ID_souscatalogue) VALUES('".$nomProduit."','".$descriptionProduit."','".$marqueProduit."','".$dimensionsProduit."','".$prixProduit."','".$quantiteProduit."','".$nouveauteProduit."','".$genreProduit."','".$souscat."')");
+			$bdd2->exec("INSERT INTO produits(nom, description, marque, dimensions, prix, quantite, nouveaute, genre_ID_genre, souscatalogue_ID_souscatalogue, vipProduit) VALUES('".$nomProduit."','".$descriptionProduit."','".$marqueProduit."','".$dimensionsProduit."','".$prixProduit."','".$quantiteProduit."','".$nouveauteProduit."','".$genreProduit."','".$souscat."','".$vipProduit."')");
 			
 			$bdd3 = bdd();
   			$IDproduit=$bdd3->query("SELECT ID_produit FROM produits WHERE nom='".$nomProduit."' AND description='".$descriptionProduit."'");

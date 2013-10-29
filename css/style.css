@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "ChampagneLimousine";
-    src : url('champagne.ttf');
+	src : url('champagne.ttf');
 }
 @font-face {
     font-family: "ChampagneLimousine";
@@ -12,141 +12,348 @@
 }
 
 body {
-    margin:0px;
-    background-image:url('background.png');
+	margin:0px;
+	background-image:url('background.png');
+
 }
 
 header {
-    width:100%;
-    height:100px;
-    position:fixed;
-    background-color: rgba(255,255,255,0.7);
-    font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	width:100%;
+	height:100px;
+	position:fixed;
+	background-color: rgba(255,255,255,0.9);
 }
 
 #nameSite {
-    padding:20px;
-    font-size:50px;
-    float:left;
+	padding:20px;
+	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	font-size:50px;
+	float:left;
 }
 
 #imgPanier {
-    width:inherit;
-    height:70px;
-    background-image:url(../design/imgpanier.png);
-    background-position:center;
-    background-repeat:no-repeat;
+	width:inherit;
+	height:70px;
+	background-image:url(../css/imgpanier.png);
+	background-position:center;
+	background-repeat:no-repeat;
 }
 
 #panier {
-    width:100px;
-    height:inherit;
-    background-color:#333333;
-    float:left;
-    color:#ffffff;
-    font-size:20px;
-    text-align:center;
-    right:20px;
-    position:fixed;
+	width:100px;
+	height:inherit;
+	background-color:#333333;
+	float:left;
+	color:#ffffff;
+	font-size:16px;
+	text-align:center;
+	right:20px;
+	position:fixed;
 }
 
 #panier a {
-    color:#ffffff;
-    text-decoration:none;
-}
-
-#nameSite a:hover {
-    text-decoration:none;
-    color:#333333;
-}
-
-#menu {
-    float:left;
-    padding:45px;
-    font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
-    font-size:20px;
-}
-
-#menu li {
-    list-style-type:none;
-    float:left;
-    padding-right:30px;
-}
-
-#conteneur {
-    width:100%;
-    height:auto;
-    margin-top:100px;
-    float:left;
-    min-height:500px;
-}
-
-#slideshow {
-    position:fixed;
+	color:#ffffff;
+	text-decoration:none;
 }
 
 #myCarousel {
-    float:left;
+	width: 80%;
+	height: 300px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	margin: 0 auto 2em;
+	z-index:-10;
+	background: #FFF;
+	background: -webkit-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	background: -moz-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	background: -ms-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	background: -o-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	
+	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+}
+
+#myCarousel img {
+	width:100%;
+	height:300px;
+}
+
+#nameSite a:hover {
+	text-decoration:none;
+	color:#333333;
+}
+
+#menu {
+	float:left;
+	padding:45px;
+	font-size:16px;
+}
+
+#menu li {
+	list-style-type:none;
+	float:left;
+	padding-right:30px;
+	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	font-size:22px;
+}
+
+#conteneur {
+	width:100%;
+	min-height:650px;
+	margin-top:125px;
+	margin-bottom:50px;
+	float:left;
 }
 
 #contain {
-    width:800px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-#newclient, #loginclient {
-    width:400px;
-    height:300px;
-    float:left;
-}
-
-#newclient {
-    background-color:#006699;
-}
-
-#loginclient {
-    background-color:#FF6600;
+	width:800px;
+	min-height:300px;
+	background-color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 5px 30px #aaaaaa;
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px;
+	font-size:14px;
+	text-align:justify;
 }
 
 footer {
-    width:100%;
-    height:200px;
-    background-color:#ffffff;
-    clear:both;
-    background-color: rgba(255,255,255,0.7);
-
+	width:100%;
+	height:200px;
+	background-color:#ffffff;
+	clear:both;
+	background-color: rgba(255,255,255,0.8);
+	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	font-size:24px;
 }
 
 #logoFooter {
-    background-image:url(../design/logo.png);
-    background-repeat:no-repeat;
-    width:250px;
-    height:200px;
+	background-image:url(../css/logo.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	width:20%;
+	height:200px;
+	float:left;
 }
-.cata {
 
+#containFoot {
+	width:80%;
+	height:200px;
+	float:left;
+}
 
+#infoFoot1, #infoFoot2, #infoFoot3 {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
 }
-.catlibelle
-{
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    position:relative;
-    top:15px;
+
+#infoFoot2 a {
+	margin-right:50px;
 }
-.imglib
+
+#infoFoot1 {
+	margin-top:40px;
+}
+
+#imglib
 {
-    background-color: #FFFFFF;
+	background-color: #FFFFFF;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0 5px 30px #AAAAAA;
     float: left;
     height: 200px;
-    margin-bottom:50px;
-    margin-left: 100px;
-    margin-right: 75px;
-    margin-top:25px;
+	margin-bottom:50px;
+    margin-left: 50px;
     width: 200px;
+	text-align:center;
+	/*font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;*/
+	font-size:18px;
+}
 
+#imglib img {
+	width:170px;
+	height:170px;
+}
+
+#imgprod
+{
+	background-color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 5px 30px #aaaaaa;
+	width:400px;
+    height:400px;
+	margin-bottom:50px;
+    margin-left: 50px;
+	text-align:center;
+	float:left;
+}
+
+#imgprod img {
+	width:300px;
+	height:300px;
+	padding-top:50px;
+}
+
+#titreProduit {
+	width:100%;
+	height:40px;
+	background-color: rgba(255,255,255,0.8);
+	margin-bottom:50px;
+	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	font-size:35px;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#catprod
+{
+	margin-left:400px;
+	margin-top:100px;
+    width:850px;
+	height:300px;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 20px 20px 20px 20px;
+	font-family: "ChampagneLimousine", Helvetica, Arial, sans-serif;
+	font-size:25px;
+}
+
+#ajoutPanier {
+	text-align:right;
+	margin-right:20px;
+}
+
+#icoPanier {
+	background-image:url('panier.png');
+	background-repeat:no-repeat;
+	background-size: 25px 25px;
+	width:45px;
+	height:25px;
+	float:right;
+}
+
+.marge {
+	padding-top:20px;
+	margin-left:100px;
+}
+
+.greyright {
+	background-color:#eeeeee;
+	text-align:right;
+	line-height:25px;
+}
+
+.btn-compte {
+	-moz-box-shadow:inset 0px 34px 0px -15px #ee3d0c;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #ee3d0c;
+	box-shadow:inset 0px 34px 0px -15px #ee3d0c;
+	background-color:#ee3d0c;
+	display:inline-block;
+	border:0;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+}
+.btn-compte:hover {
+	background-color:#ee3d0c;
+}
+.btn-compte:active {
+	position:relative;
+	top:1px;
+}
+
+.center {
+	text-align:center;
+}
+
+.grey {
+	background-color:#eeeeee;
+}
+
+#inscriptionForm {
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#inscriptionForm input[type="text"], input[type="tel"], input[type="date"], input[type="email"], input[type="password"] {
+	width:350px;
+}
+
+#prodNewIndex {
+	width:1250px;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.rubanNouveaute {
+	background-image:url(ruban.png);
+	width:200px;
+	height:200px;
+	position:absolute;
+}
+
+#espace_membre {
+	background-color:#eeeeee;
+	height:25px;
+	text-align:center;
+}
+
+#gestion_membre {
+	margin-top:10px;
+	width:100%;
+	height:300px;
+}
+
+@media screen and (max-width: 980px) {
+
+header {
+	width:100%;
+	height:150px;
+	position:relative;
+	background-color: rgba(255,255,255,0.9);
+}
+
+#conteneur {
+	width:100%;
+	min-height:650px;
+	margin-top:10px;
+	margin-bottom:50px;
+	float:left;
+}
+
+#menu {
+	padding:25px;
+	margin-top:60px;
+	background-color:rgba(255,255,255,0.8);
+}
+
+#prodNewIndex {
+	width:100%;
+}
+
+#containFoot {
+	width:100%;
+	height:200px;
+	float:left;
+}
+
+#infoFoot1, #infoFoot2, #infoFoot3 {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#infoFoot1 {
+	margin-top:20px;
+}
+
+#imglib {
+	margin-bottom:25px;
+}
 }

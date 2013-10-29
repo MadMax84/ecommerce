@@ -70,7 +70,7 @@ if (isset($_POST["bouton_envoi"])) {
         $erreur.="</div>";
         header("Location: ../moncompte.php?succes=$erreur");
     } else {
-        enregistrerClient($bdd, $pseudo, sha1($psw), $email, $nom, $prenom, $date, $sexe, $tel,
+        enregistrerClient($bdd, $pseudo, md5($psw), $email, $nom, $prenom, $date, $sexe, $tel,
                           $num_rue, $adresse, $cp, $ville, 
                           $num_rue_liv, $adresse_liv, $cp_liv, $ville_liv, $pays);
         header("Location: ../index.php?succes=true");

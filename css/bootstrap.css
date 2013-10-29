@@ -223,7 +223,8 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family:Calibri;
   font-size: 14px;
 }
 
@@ -239,7 +240,7 @@ ul a {
 
 a:hover,
 a:focus {
-  color: #000000;
+  /*color: #000000;*/
   text-decoration: none;
 }
 
@@ -2012,7 +2013,7 @@ table {
 .table td {
   padding: 8px;
   line-height: 20px;
-  text-align: left;
+  /*text-align: left;*/
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }

@@ -11,7 +11,7 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
 <div id="contain">
 <h3>Ajouter un sous-catalogue</h3>
 <form action="" method="post" enctype="multipart/form-data">
-    <table>
+    <table class="table table-bordered">
         <tr>
             <td>Libellé du sous - catalogue :</td>
             <td><input name="libelleSousCat" type="text" placeholder="Nom de votre sous - catalogue" required/></td>
@@ -50,7 +50,7 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
             <td colspan="2">
                 <!-- On limite le fichier à 10Mo -->
                 <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-                Image : <input type="file" id="avatar" name="avatar" required>
+                Image : <input type="file" id="avatar" name="avatar">
             </td>
         </tr>
         <tr>

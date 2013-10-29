@@ -25,7 +25,7 @@
       <li class="dropdown">
         <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Gestion de la TVA<b class="caret"></b></a>
         <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Changer valeur de la TVA</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/modifTVA.php">Modifier la TVA</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -38,26 +38,16 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Ventes privées<b class="caret"></b></a>
-        <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Créer un catalogue</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Créer un produit privé</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Mettre en ligne un catalogue / produit privé</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
         <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Clients<b class="caret"></b></a>
         <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Liste des clients</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Ajouter un client</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/liste_clients.php">Liste des clients</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/add_client.php">Ajouter un client</a></li>
         </ul>
       </li>
       <li class="dropdown">
         <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Commandes<b class="caret"></b></a>
         <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Liste des commandes</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Gestion des commandes</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/liste_commandes.php">Liste des commandes</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -70,7 +60,7 @@
         <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Slideshow<b class="caret"></b></a>
         <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
           <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/add_slideshow.php">Ajouter une image</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Supprimer une image</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="../admin/del_slideshow.php">Supprimer une image</a></li>
         </ul>
       </li>
       <li>

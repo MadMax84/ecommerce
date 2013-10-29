@@ -11,7 +11,7 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
 <div id="contain">
 <h3>Ajouter un catalogue</h3>
 <form action="" method="post" enctype="multipart/form-data">
-    <table>
+    <table class="table table-bordered">
         <tr>
             <td><label for="libelleCat">Libellé du catalogue :</label></td>
             <td><input name="libelleCat" type="text" placeholder="Nom de votre catalogue" id="libelleCat" required/></td>

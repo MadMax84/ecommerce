@@ -6,7 +6,12 @@ if (isset($_SESSION['login'], $_SESSION['pwd']))
 	require "../admin/include/navbar.php";
 ?>
 
-<!-- TON CODE HTML -->
+<div id="contain">
+	<div id="block1" class="textcenter">
+		<div id="dashIcon"></div>
+		<a href="../admin/liste_commandes.php">Liste des commandes</a>
+	</div>
+</div>
 
 <?php
 	require "../admin/include/footer.php";
